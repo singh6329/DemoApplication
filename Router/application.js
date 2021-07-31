@@ -5,7 +5,6 @@ const router =express.Router()
 router.get('/',async(req,res)=>{
     try{
         const emp1= await employee.find()
-        res.send("Harshit is here!!")
         res.json(emp1)
         
         
@@ -40,16 +39,6 @@ router.delete(('/:id'),async (req,res)=>{
         res.send("Error while deleting data"+err)
     }
 })
-
-
-
-
-
-
-
-
-
-
 
 
 router.patch('/:id',async(req,res)=>{
